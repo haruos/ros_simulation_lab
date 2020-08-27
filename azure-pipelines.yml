@@ -20,6 +20,7 @@ jobs:
       call "c:\opt\ros\melodic\x64\setup.bat"
       pushd catkin_ws
       vcpkg install sdl2:x64-windows
+      python -m pip install --upgrade pip
       pip install circle-fit
       catkin_make --use-ninja -DCMAKE_BUILD_TYPE=Release
     displayName: Build ROS Workspace
